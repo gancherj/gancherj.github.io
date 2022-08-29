@@ -1,0 +1,45 @@
+<html>
+<script>
+ function incrementValue(n)
+{
+    var value = parseInt(document.getElementById(n).value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById(n).value = value;
+}
+ function decrementValue(n)
+{
+    var value = parseInt(document.getElementById(n).value, 10);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    document.getElementById(n).value = value;
+}
+</script>
+
+<form>
+ Week 1:
+ <input type="text" id="week1" value="0"/>
+ <input type="button" onclick="incrementValue('week1')" value="Increment Week 1" />
+ <input type="button" onclick="decrementValue('week1')" value="Decrement Week 1" />
+ <p />
+
+ Week 2:
+ <input type="text" id="week2" value="0"/>
+ <input type="button" onclick="incrementValue('week2')" value="Increment Week 1" />
+ <input type="button" onclick="decrementValue('week2')" value="Decrement Week 2" />
+ <p />
+
+ Week 3:
+ <input type="text" id="week3" value="0"/>
+ <input type="button" onclick="incrementValue('week3')" value="Increment Week 1" />
+ <input type="button" onclick="decrementValue('week3')" value="Decrement Week 3" />
+
+ <p />
+
+ Week 4:
+ <input type="text" id="week4" value="0"/>
+ <input type="button" onclick="incrementValue('week4')" value="Increment Week 1" />
+ <input type="button" onclick="decrementValue('week4')" value="Decrement Week 4" />
+ </form>
+
+</html>
