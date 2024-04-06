@@ -15,31 +15,48 @@
     
    
 
-    <body>
-        <header> <h1> Joshua Gancher </h1> 
-        
-        </header>
-       <div class = "me">
-           <img src="mesmall.png" style="max-height: 300px; max-width: 300px; margin-left: auto; margin-right: auto" >
-              <b> Email: </b> jgancher@andrew.cmu.edu
-              <br>
-              <b> <a href="materials/cv.pdf">CV</a></b>
-              <hr/>
-       </div>
-       
+    <body style="margin-top:3em;">
+       <div style="display:flex;">
+           <div class = "me" style="width:300px;text-align:center;">
+               <img src="mesmall.png" style="max-height: 300px; max-width: 300px">
+                         
+                  <b> Email: </b> jgancher@andrew.cmu.edu
+                  <br>
+                  <b> <a href="materials/cv.pdf">CV</a></b>
+                  |
+                  <b> <a href="#pubs"> Publications </a> </b>
+                  |
+                  <b> <a href="#service"> Service </a> </b>
+           </div>
+           <div style="width:500px;"> </div>
+           <div style="flex-grow:1;margin:auto;">
+
+           <h1> Joshua Gancher </h1> 
              I am a postdoc at Carnegie Mellon University, advised by <a
                  href="https://www.andrew.cmu.edu/user/bparno/">Bryan Parno</a>. I obtained my PhD from Cornell University, co-advised by <a href="http://elaineshi.com">Elaine Shi</a> and <a href="http://www.cs.cornell.edu/~jgm">Greg Morrisett</a>.
 
                <p>
                    My research is about using techniques from formal methods and program verification to certify cryptographic implementations and proofs. 
                </p>
-               <p>
-               <b> I am on the job market this year! Please reach out if your
+
+           </div>
+        </div>
+       
+
+        
+        <center>
+        <p>
+           <b> I am on the job market this year! Please reach out if your
                    department is hiring. You can find my application materials
                    <a href="materials/materials.html">here</a>.</b>
-               </p>
+           </p>
+        </center>
+        <hr/>
                
-               <h2> Preprints/Publications:</h2>
+        <center>
+               <a id="pubs"> <h2> Preprints/Publications:</h2> </a>
+        </center>
+        <div id="publicationss">
 
           <a href="https://arxiv.org/abs/2312.09326">WaveCert: Formal Compiler Validation for Asynchronous Dataflow
               Programs</a>.
@@ -101,7 +118,15 @@
               <div class="venue"> PETS 2017. </div> 
               <div class="authors"> Joshua Gancher, Adam Groce, and Alex
                   Ledger.</div>
+        </div>
 
+              <hr/>
+              <a id="service"> <h2> Service </h2> </a>
+           <ul>
+               <li> Organizing Committees: CMU Secure Blockchain Summit 2024 </li>
+               <li> Program Committees: FCS 2020, FC 2023, SLPASH SRC 2023, FCS 2024, CCS 2024 </li>
+               <li> External Reviewer for CCS, CSF, POPL </li>
+           </ul>
               <hr/>
 
     </body>
