@@ -1,0 +1,186 @@
+<!--
+
+    set up grading
+
+    lectures to cover the whole stack
+
+    papers, discussion based
+        - discussion based on questions / reflection that students fill out
+
+    final project
+
+-->
+
+
+<html>
+    <head>
+        <title> CS 7480 </title>
+        <link rel="stylesheet" href="style.css"> 
+
+    </head>
+
+    <body>
+        <h1> CS 7480: Special Topics in PL: <br/> Formal Security for Cryptography </h1>
+        <h2 id="course-info">Course Info</h2>
+        <h4 id="">Time and Place: <br> Tuesdays and Fridays, Hayden Hall 321, 3:25 pm - 5:05pm</h3>
+        <h4 id="instructor" style="margin-bottom: 0%;">Instructor:</h3>
+        <div style="text-align: center;">
+            <ul style="display: inline-block; text-align: left;">
+            <li><a href="https://gancher.dev">Joshua Gancher</a></li>
+            <li> Office: WVH 360 </li>
+            <li>Email: j.gancher at <a href="http://northeastern.edu">northeastern.edu</a></li>
+            <li>Office hours by appointment</li>
+            </ul>
+        </div>
+        
+        <h4> Description </h4>
+
+        <p>Virtually all digital communications infrastructure relies on cryptography for security. While crypto is essential, it's also extremely brittle --- any coding error or mistake in a security proof can compromise the entire system's security.
+        Since cryptographic security can have such high stakes, it's a perfect fit for
+        techniques from PL (e.g., type systems and theorem
+        provers), which can deliver provable, <em>fully formal</em> security guarantees.</p>
+        <p>This seminar will cover the science and practice of building cryptographic code
+        with formally proven security guarantees. We will cover the &quot;full stack&quot;,
+        ranging from cryptographic security for complex protocols (e.g., TLS and secure VPNs), to the security of their underlying cryptographic algorithms (e.g.,
+        symmetric ciphers and elliptic curves) and associated
+        high-performance implementations in C and assembly.</p>
+        <p>The intended audience is graduate students with an interest in formal methods or applied cryptography, and will consist of lectures, student-led paper presentations,
+        and a course project. The course will assume some amount of programming experience, and
+        familiarity with concepts from programming languages (e.g., operational
+        semantics, type systems, and first-order logic); supplemental background reading will be supplied as well. There is no formal textbook requirement for the course.</p>
+
+        <h3 id="grading">Assignments and Evaluation </h2>
+        After an initial set of lectures, the course will consist of paper discusions
+        and a final project. The course grade will be determined by:
+        <ul>
+            <li> 20% in-class participation; </li>
+            <li> 40% written paper reflections; and </li>
+            <li> 40% a final course project. </li>
+        </ul>
+        All graded material will be submitted via <a href="http://canvas.northeastern.edu">Canvas</a>.
+
+        <h4 style="text-align: left;"> Paper Reflections </h4>
+        For each paper we read, you will submit <a href="paper-questions.txt">a paper reflection</a>, in the form of a questionnaire, via Canvas.
+        Each paper's reflection will be due by 11:59 PM the day before the class that we read the paper. 
+        Please spend some time to think critically about your answers! 
+
+        <p>
+            You may skip up to <b>four</b> paper reflections for free.    
+        </p>
+
+        <h4 style="text-align: left;"> Final Project </h4>
+        See <a href="final.html">here</a>.
+
+        <h4 style="text-align: left;"> Academic Integrity Policy </h4>
+        For paper reflections, you are to complete them <b>by yourself</b>, with no feedback from others or AI assistants.
+
+        For the final project, 
+        you are free to build upon the work of prior papers and open-source projects with the appropriate citations.
+        In particular, any code or text not written by you personally must be cited.
+        Minor coding tasks and grammar cleanup by AI is allowable, but must be cited. 
+        You may incorporate feedback from others outside of your group with appropriate citations as well. 
+
+        <h3 id="background">Background Reading</h3>
+        <p>
+        An understanding of the Simply Typed Lambda Calculus (STLC) will 
+        be useful to understand the papers we will read in class. 
+        To read up on this, I recommend Chapters 1-3, 5, 8-9, and 11 of Benjamin Pierce's textbook 
+        <a href="https://www.cis.upenn.edu/~bcpierce/tapl/index.html">Types and Programming Languages</a>.
+        </p>
+
+        <hr/>
+        <h3 id="schedule-subject-to-change">Schedule (under construction)</h2>
+        
+        <table id="schedule">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th> Date </th>
+                    <th> Topics </th>
+                    <th> Presenter </th>
+                    <th> Notes </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <script>
+            const tdata = [
+                ["Sep 6", 
+                    /*html*/`
+                    Course Overview
+                    <ul>
+                        <li> Readings: <a href="https://eprint.iacr.org/2019/1393"> SoK: Computer-Aided Cryptography </a> </li>
+                        <ul>
+                            <li> <em> No paper reflection needed for this SoK. </li>
+                        </ul>
+                    </ul>`, "Josh", ""],
+                ["Sep 10", "Background", "Josh", ""],
+                // ["Protocol Security"],
+                ["Sep 13", "", "", ""],
+                ["Sep 17", "", "", ""],
+                ["Sep 20", "", "", ""],
+                ["Sep 24", "", "", ""],
+                ["Sep 27", "", "", ""],
+                ["Oct 1", "", "", ""],
+                ["Oct 4", "", "", ""],
+                ["Oct 8", "", "", ""],
+                // ["Crypto Primitive Security"],
+                ["Oct 11", "","",  ""],
+                ["Oct 15", "", "", ""],
+                ["Oct 18", "", "", ""],
+                ["Oct 22", "", "", ""],
+                ["Oct 25", "", "", "Project proposals due"],
+                ["Oct 29", "", "", ""],
+                ["Nov 1", "", "", ""],
+                ["Nov 5", "", "", ""],
+                // ["Implementation Security"],
+                ["Nov 8", "", "", ""],
+                ["Nov 12", "", "", ""],
+                ["Nov 15", "", "", ""],
+                ["Nov 19", "", "", ""],
+                ["Nov 22", "", "", ""],
+                ["Nov 26", "", "", ""],
+                ["Dec 3", "", "", ""],
+                ["Dec 6", "", "", ""],
+                ["Project Presentations"],
+                ["Dec 10", "Project Presentations", "",  ""],
+                ["Dec 13", "Project Presentations", "", "Projects due"],
+            ];
+            const tbody = document.querySelector("#schedule tbody");
+            var ctr = 1;
+            tdata.forEach(item => {
+                    if (item.length == 4) { 
+                        const row = document.createElement("tr");
+                        const numCell = document.createElement("td");
+                        numCell.classList.add("num");
+                        numCell.innerHTML=ctr;
+                        row.appendChild(numCell);
+                        ctr++;
+
+                        Object.values(item).forEach(text => {
+                            const cell = document.createElement("td");
+                            cell.innerHTML = text;
+                            row.appendChild(cell);
+                        });
+
+                        tbody.appendChild(row);
+                    }
+                    else { 
+                        const row = document.createElement("tr");
+                        row.classList.add("week");
+                        const cell0 = document.createElement("td");
+                        cell0.setAttribute("colspan", "5");
+                        cell0.innerHTML = item[0];
+                        row.appendChild(cell0);
+                        tbody.appendChild(row);
+                    }
+                });
+        </script>
+
+
+    </body>
+
+</html>
