@@ -1,0 +1,16 @@
+For each paper, please fill out detailed responses to the following questions:
+
+1. At a high level, what problem is this paper trying to solve?
+
+2. What are the main contributions of the paper? 
+
+3. Did the paper achieve these contributions?
+
+4. What are its weaknesses / what would you have done differently?
+
+5. What questions do you have? What didn't you quite get?
+
+6. Did you find the paper easy to understand? If so, what parts did you find particularly clear? If not, why not? 
+
+
+Responses will be due 11:59PM the day before the paper's corresponding class.
