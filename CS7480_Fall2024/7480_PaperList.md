@@ -1,78 +1,84 @@
-# List of papers for CS 7480
-Approx 48 papers?
+Below is a non-exhaustive list of papers we may select for class. If you are interested in any paper in particular, 
+or would like to present one, please let me know! 
 
-## Crypto background (depending on student backgrounds)
 
-- Symmetric encryption
-    - Bellare paper about comparing the different security notions
-    - IND-CPA, INT-CTXT
-- Diffie-Hellman exchange
-    - DDH, CDH, PRF-ODH, other notions (e.g., the one from Key-schedule security for TLS paper )
-- Signature schemes
-- Hash functions, HKDF 
+## Protocol Analysis Tools
+
+- Security Protocol Verification: Symbolic and Computational Models
+    - Nice overview paper
+
+### Computational Tools
+    - CryptoVerif
+        - Cryptoverif: a computationally-sound security protocol verifier
+    - EasyCrypt
+    - Squirrel
+        - The Squirrel Prover and its Logic
+    - Owl
+        - Owl: Compositional Verification of Security Protocols via an Information-Flow Type System.
+  
+### Symbolic Tools
+    - Tamarin
+        - Automated Analysis of Diffie-Hellman Protocols and Advanced Security Properties
+    - Proverif
+        - The Applied Pi Calculus: Mobile Values, New Names, and Secure Communication
+        - ProVerif with Lemmas, Induction, Fast Subsumption, and Much More
+
 
 ## TLS
 
-- Some kind of overview of TLS
-    - RFC 8446
-    - What's in an RFC
+Background:
+- RFC 8446
 
-F*: 
-- Brief intro to refinement types (by me?)
+Symbolic Analyses
+    - A Comprehensive Symbolic Analysis of TLS 1.3
+    - A Symbolic Analysis of Privacy for TLS 1.3 with Encrypted Client Hello
+
+TLS using module-based abstraction
 - Modular Code-Based Cryptographic Verification
 - Implementing TLS with Verified Cryptographic Security
 - Implementing and Proving the TLSs 1.3 Record Layer
 
-CryptoVerif for TLS:
-- Cryptoverif: a computationally-sound security protocol verifier
+TLS via CryptoVerif
 - Verified Models and Reference Implementations for the TLS 1.3 Standard Candidate
 
-- DY Fuzzing
+- A Security Model and Fully Verified Implementation for the IETF QUIC Record Layer
 
-## TLS Attacks
+### TLS Attacks
 
 - Logjam:  Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice
 - FREAK: A Messy State of the Union: Taming the Composite State Machines of TLS
 - triple handshake : Triple Handshakes and Cookie Cutters: Breaking and Fixing Authentication over TLS
+- ALPACA: Application Layer Protocol Confusion - Analyzing and Mitigating Cracks in TLS Authentication
 
-## Other tools / ideas for protocol analysis
+### TLS Analysis
 
-- Owl
-- Squirrel
+- DY Fuzzing: Formal Dolev-Yao Models Meet Cryptographic Protocol Fuzz Testing
 
-## Symbolic analysis
-
-- Tamarin
 
 ## Verified Implementations 
 
-- EverCrypt paper
-- Vale, Jay's AES-GCM paper
-- Fiat Cryptography
-- The last yard paper
+- EverCrypt: A Fast, Verified, Cross-Platform Cryptographic Provider
+- Vale: Verifying High-Performance Cryptographic Assembly Code
 
-- HACL*?
+- Simple High-Level Code For Cryptographic Arithmetic – With Proofs, Without Compromises
+- CryptOpt: Verified Compilation with Random Program Search for Cryptographic Primitives
 
-## Some verified parsing stuff
+- Verified Transformations and Hoare Logic: Beautiful Proofs for Ugly Assembly Language
 
-- EverParse
+- The Last Yard: Foundational End-to-End Verification of High-Speed Cryptography
+
+
+## Verified Parsing
+
+- EverParse: Verified Secure Zero-Copy Parsers for Authenticated Message Formats
+- Comparse: Provably Secure Formats for Cryptographic Protocols
 
 ## Implementation Security
 
-- ctverif: Verifying Constant-Time Implementations
+- Verifying Constant-Time Implementations
+    - ctverif
 - Spectre/meltdown: SoK: Practical Foundations for Software Spectre Defenses
 - FaCT: A DSL for Timing-Sensitive Computation
 
-
-1. Course Overview
-    - Crypto background
-      -  AE, Signatures, KDFs, DHKE
-    - PL background
-        - type systems 
-        - refinement types
-    - SoK: Computer-Aided Cryptography
-        - Protocol Analysis
-        - Implementation correctness and side-channel resistance
-        - List of verified implementations. What are the gaps in these proofs?
-
-2. 
+- “These results must be false”: A usability evaluation of constant-time analysis tools
+  - https://www.usenix.org/system/files/usenixsecurity24-fourne.pdf

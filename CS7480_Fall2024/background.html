@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title> CS 7480 </title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+
+    <body>
+        <h1> CS 7480: Special Topics in PL: <br/> Formal Security for Cryptography </h1>
+        <h2>Background Materials</h2>
+
+        <h4 style="text-align: left";> Programming Language Foundations</h4>
+        <p>
+        An understanding of the Simply Typed Lambda Calculus (STLC) will 
+        be useful for those papers which use the language of PL. 
+        To read up on this, I recommend Chapters 1-3, 5, 8-9, and 11 of Benjamin Pierce's textbook 
+        <a href="https://www.cis.upenn.edu/~bcpierce/tapl/index.html">Types and Programming Languages</a>.
+        </p>
+        
+        <h4 style="text-align: left";> Cryptographic Background </h4>
+        <p>
+        This class will mostly deal with "ordinary" cryptography, including symmetric encryption schemes, digital signatures, 
+        and hash functions. As a reference, you can take a look at
+        <a href="https://joyofcryptography.com">The Joy of Cryptography</a>, particularly chapters 2, 4, 6, 7, and 12-14. </li>
+        </p>
+
+        <h4 style="text-align: left";> Verification </h4>
+        This class will touch upon <em>formal verification</em>, which uses 
+        software tools to conduct mathematically precise proofs about programs. 
+        If you haven't had experience with formal verification, I recommend taking a look below:
+        <ul>
+            <li> <b>SAT/SMT-based tools</b>. These tools, such as <a href="https://dafny.org/latest/OnlineTutorial/guide">Dafny</a>,
+                analyze programs by exporting <em>verification conditions</em> to automatic theorem provers, 
+                such as <a href="https://github.com/Z3Prover/z3/wiki">Z3</a>.
+            <li> In contrast, <b>type theory-based tools</b> such as <a href="https://coq.inria.fr">Coq</a> or <a href="https://lean-lang.org">Lean</a> 
+                present general-purpose, foundational tools for mathematical reasoning, which can then be used to analyze programs 
+                (among other tasks).
+            </li>
+        </ul>
+    </body>
+</html>
