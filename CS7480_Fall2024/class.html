@@ -80,7 +80,7 @@
         If you are interested, see <a href="background.html">here</a> for some suggested background reading.
 
         <hr/>
-        <h3 id="schedule-head">Schedule (under construction)</h2>
+        <h3 id="schedule-head">Schedule (under construction / subject to change)</h2>
 
         <p>
         A growing list of papers can be found <a href="7480_PaperList.md">here</a>.
@@ -92,7 +92,6 @@
                     <th> </th>
                     <th> Date </th>
                     <th> Topics </th>
-                    <th> Presenter </th>
                     <th> Notes </th>
                 </tr>
             </thead>
@@ -111,43 +110,44 @@
                         <ul>
                             <li> <em> No paper reflection needed for this SoK. </li>
                         </ul>
-                    </ul>`, "Josh", ""],
-                ["Sep 10", "Background", "Josh", ""],
-                // ["Protocol Security"],
-                ["Sep 13", "", "", ""],
-                ["Sep 17", "", "", ""],
-                ["Sep 20", "", "", ""],
-                ["Sep 24", "", "", ""],
-                ["Sep 27", "", "", ""],
-                ["Oct 1", "", "", ""],
-                ["Oct 4", "", "", ""],
-                ["Oct 8", "", "", ""],
-                // ["Crypto Primitive Security"],
-                ["Oct 11", "","",  ""],
-                ["Oct 15", "", "", ""],
-                ["Oct 18", "", "", ""],
-                ["Oct 22", "", "", ""],
-                ["Oct 25", "", "", "Project proposals due"],
-                ["Oct 29", "", "", ""],
-                ["Nov 1", "", "", ""],
-                ["Nov 5", "", "", ""],
+                    </ul>`, ""],
+                ["Sep 10", "Background", ""],
+                ["Protocol Security"],
+                ["Sep 13", "", ""],
+                ["Sep 17", "", ""],
+                ["Sep 20", "", ""],
+                ["Sep 24", "", ""],
+                ["Sep 27", "", ""],
+                ["Oct 1", "", ""],
+                ["Implementation Security"],
+                ["Oct 4", "", ""],
+                ["Oct 8", "", ""],
+                ["Oct 11", "", ""],
+                ["Oct 15", "", ""],
+                ["Oct 18", "", ""],
+                ["Oct 22", "", "Project proposals due"],
+                ["Special Topics"],
+                ["Oct 25", "", ""],
+                ["Oct 29", "", ""],
+                ["Nov 1", "",  ""],
+                ["Nov 5", "",  ""],
                 // ["Implementation Security"],
-                ["Nov 8", "", "", ""],
-                ["Nov 12", "", "", ""],
-                ["Nov 15", "", "", ""],
-                ["Nov 19", "", "", ""],
-                ["Nov 22", "", "", ""],
-                ["Nov 26", "", "", ""],
-                ["Dec 3", "", "", ""],
-                ["Dec 6", "", "", ""],
+                ["Nov 8", "",  ""],
+                ["Nov 12", "",  ""],
+                ["Nov 15", "",  ""],
+                ["Nov 19", "",  ""],
+                ["Nov 22", "",  ""],
+                ["Nov 26", "",  ""],
+                ["Dec 3", "", ""],
+                ["Dec 6", "", ""],
                 ["Project Presentations"],
-                ["Dec 10", "Project Presentations", "",  ""],
-                ["Dec 13", "Project Presentations", "", "Projects due"],
+                ["Dec 10", "Project Presentations", ""],
+                ["Dec 13", "Project Presentations", "Projects due"],
             ];
             const tbody = document.querySelector("#schedule tbody");
             var ctr = 1;
             tdata.forEach(item => {
-                    if (item.length == 4) { 
+                    if (item.length == 3) { 
                         const row = document.createElement("tr");
                         const numCell = document.createElement("td");
                         numCell.classList.add("num");
@@ -167,7 +167,7 @@
                         const row = document.createElement("tr");
                         row.classList.add("week");
                         const cell0 = document.createElement("td");
-                        cell0.setAttribute("colspan", "5");
+                        cell0.setAttribute("colspan", "4");
                         cell0.innerHTML = item[0];
                         row.appendChild(cell0);
                         tbody.appendChild(row);
