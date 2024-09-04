@@ -1,16 +1,23 @@
-For each paper, please fill out detailed responses to the following questions:
+For each paper, please fill out detailed responses to the following questions.
+Responses will be due 11:59PM the day before the paper's corresponding class.
 
 1. At a high level, what problem is this paper trying to solve?
 
-2. What are the main contributions of the paper? 
+2. What are the main contributions of the paper?
 
-3. Did the paper achieve these contributions?
+3. Do you think the paper achieved these contributions?
 
-4. What are its weaknesses / what would you have done differently?
+4. What questions do you have / what didn't you quite get?
 
-5. What questions do you have? What didn't you quite get?
+5. Did you find the paper easy to understand? If so, what parts did you find particularly clear? If not, why not?
 
-6. Did you find the paper easy to understand? If so, what parts did you find particularly clear? If not, why not? 
+6. What would you (or the authors) do in terms of follow-up work, building on this paper?
 
+--- Bonus Questions ---
+Below are some questions that you are welcome to answer, but will not be
+evaluated on answering.
 
-Responses will be due 11:59PM the day before the paper's corresponding class.
+What are its technical weaknesses / what would you have done differently?
+
+Are there any interesting connections to your own research agendas?
+
