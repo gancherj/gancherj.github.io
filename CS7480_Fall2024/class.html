@@ -1,0 +1,442 @@
+<!--
+
+    set up grading
+
+    lectures to cover the whole stack
+
+    papers, discussion based
+        - discussion based on questions / reflection that students fill out
+
+    final project
+
+-->
+
+
+<html>
+    <head>
+        <title> CS 7480 </title>
+        <link rel="stylesheet" href="style.css"> 
+
+    </head>
+
+    <body>
+        <h1> CS 7480: Special Topics in PL: <br/> Formal Security for Cryptography </h1>
+        <h2 id="course-info">Course Info</h2>
+        <h4 id="">Time and Place: <br> Tuesdays and Fridays, Hayden Hall 321, 3:25 pm - 5:05pm</h3>
+        <h4> Quick links: <a href="final.html">Final Project</a> | <a href="#schedule-head">Schedule</a> | <a href="paper-questions.txt">Paper Reflections</a> | <a href="#policies">Class Policies</a></h4>
+        <h4 id="instructor" style="margin-bottom: 0%;">Instructor:</h3>
+        <div style="text-align: center;">
+            <ul style="display: inline-block; text-align: left;">
+            <li><a href="https://gancher.dev">Joshua Gancher</a></li>
+            <li> Office: WVH 360 </li>
+            <li>Email: j.gancher at <a
+                    href="http://northeastern.edu">northeastern.edu</a>
+                (Include CS7480 in the subject line)</li>
+            <li>Office hours by appointment</li>
+            </ul>
+        </div>
+        
+        <h4> Description </h4>
+
+        <p>Virtually all digital communications infrastructure relies on cryptography for security. While crypto is essential, it's also extremely brittle --- any coding error or mistake in a security proof can compromise the entire system's security.
+        Since cryptographic security can have such high stakes, it's a perfect fit for
+        techniques from PL (e.g., type systems and theorem
+        provers), which can deliver provable, <em>fully formal</em> security guarantees.</p>
+        <p>This seminar will cover the science and practice of building cryptographic code
+        with formally proven security guarantees. We will cover the &quot;full stack&quot;,
+        ranging from cryptographic security for complex protocols (e.g., TLS and secure VPNs), to the security of their underlying cryptographic algorithms (e.g.,
+        symmetric ciphers and elliptic curves) and associated
+        high-performance implementations in C and assembly.</p>
+        <p>The intended audience is graduate students with an interest in formal methods or applied cryptography, and will consist of lectures, student-led paper presentations,
+        and a course project. The course will assume some amount of programming experience, and
+        familiarity with concepts from programming languages (e.g., operational
+        semantics, type systems, and first-order logic); supplemental background reading will be supplied as well. There is no formal textbook requirement for the course.</p>
+
+        <h3 id="grading">Assignments and Evaluation </h2>
+        After an initial set of lectures, the course will consist of paper discusions
+        and a final project. The course grade will be determined by:
+        <ul>
+            <li> 20% in-class participation; </li>
+            <li> 40% written paper reflections; and </li>
+            <li> 40% a final course project. </li>
+        </ul>
+        All graded material will be submitted via <a href="http://canvas.northeastern.edu">Canvas</a>.
+
+        <h4 style="text-align: left;"> Paper Reflections and In-Class Discussion </h4>
+        For each paper we read, you will submit <a href="paper-questions.txt">a paper reflection</a>, in the form of a questionnaire, via Canvas.
+        Each paper's reflection will be due by 11:59 PM the day before the class that we read the paper. 
+        Please spend some time to think critically about your answers! The
+        following paper discussion will directly be informed by your answers to the questionnaire.
+
+
+
+        <p>
+        You may skip up to <b>four</b> paper reflections, and (separately) <b>four</b> in-class discussions for free.    
+        </p>
+
+        <h5 style="text-align: left;"> Grading Policy for Paper Reflections </h4>
+        Paper reflections will be graded on a binary complete/did not complete
+        scale. Don't worry if you can't come up with answers to every question! 
+        If you turn in a paper reflection, I will trust that you put in a
+        <b>good faith effort</b> to think deeply about the paper and respond
+        accordingly. 
+
+        <h4 style="text-align: left;"> Final Project </h4>
+        See <a href="final.html">here</a>.
+
+
+        <h3 id="background">Background Reading</h3>
+        The readings for this class will utilize a mix of ideas from PL, verification, security, and cryptography.
+        If you are interested, see <a href="background.html">here</a> for some suggested background reading.
+
+        <hr/>
+        <h3 id="schedule-head">Schedule (under construction / subject to change)</h2>
+
+        <p>
+        A growing list of papers can be found <a href="7480_PaperList.md">here</a>.
+        </p>
+        
+        <table id="schedule">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th> Date </th>
+                    <th> Topics </th>
+                    <th> Notes </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="week"> <td colspan=4> Part 1: Course Overview </td> </tr>
+
+                <tr>
+                    <td class="num"> 1 </td>
+                    <td> Sep 6 </td>
+                    <td>
+                        Course Overview
+                        <ul>
+                            <li> Readings: <a href="https://eprint.iacr.org/2019/1393"> SoK: Computer-Aided Cryptography </a> </li>
+                            <ul>
+                                <li> <em> No paper reflection needed for this SoK. </li>
+                            </ul>
+                        </ul> </td>
+                        <td> <a href="classes/class1.pdf">slides</a> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 2 </td>
+                    <td> Sep 10 </td>
+                    <td> Foundations </td>
+                    <td> <a href="classes/class2.pdf">slides</a></td>
+                </tr>
+
+                <tr class="week"> <td colspan=4> Part 2: Protocol Security </td> </tr>
+
+                <tr>
+                    <td class="num"> 3 </td>
+                    <td> Sep 13 </td>
+                    <td> <a
+                                 href="https://dl.acm.org/doi/10.1145/3133956.3134063">A
+                    Comprehensive Symbolic Analysis of TLS 1.3</td>
+                    <td> Additional Readings:
+                        <ul>
+                            <li> <a
+                                    href="https://doi.org/10.1007/978-3-642-28641-4_2">Security
+                                    Protocol Verification: Symbolic and
+                                    Computational Methods</a> </li>
+                            <li> <a
+                                         href="https://datatracker.ietf.org/doc/html/rfc8446">RFC
+                                         8446: TLS 1.3</a> </li>
+                            <li> <a
+                                         href="https://github.com/tls13tamarin/TLS13Tamarin/tree/master/src/rev21">TLS
+                                         in Tamarin</a></li>
+                                    
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 4 </td>
+                    <td> Sep 17 </td>
+                    <td> <a
+                                 href="https://dl.acm.org/doi/10.1145/1368310.1368326">
+                            Computationally sound mechanized proofs for basic
+                            and public-key Kerberos</a></td>
+                    <td> <ul>
+                            <li> <a
+                                         href="https://bblanche.gitlabpages.inria.fr/cryptoverif/">CryptoVerif</a>
+                            </li>
+                            <li> <a
+                                         href="https://bblanche.gitlabpages.inria.fr/cryptoverif//kerberos/">Kerberos
+                                         Mechanization</a> </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 5 </td>
+                    <td> Sep 20 </td>
+                    <td> <a href="https://eprint.iacr.org/2023/57">DY Fuzzing:
+                            Formal Dolev-Yao Models Meet Cryptographic Protocol
+                            Fuzz Testing</a></td>
+                    <td> </td>
+                </tr>
+                
+                <tr>
+                    <td class="num"> 6 </td>
+                    <td> Sep 24 </td>
+                    <td> <a
+                            href="https://dl.acm.org/doi/10.1145/3594735">SSProve:
+                            A Foundational Framework for Modular Cryptographic
+                            Proofs in Coq</a> </td>
+                    <td> <a
+                                 href="https://github.com/SSProve/ssprove">Repository</a> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 7 </td>
+                    <td> Sep 27 </td>
+                    <td> <a href="https://eprint.iacr.org/2023/473.pdf"> OWL:
+                            Compositional Verification of Security Protocols via
+                            an Information-Flow Type System</a></td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 8 </td>
+                    <td> Oct 1 </td>
+                    <td> <a href="https://inria.hal.science/hal-04579038">The
+                            Squirrel Prover and its Logic</a> </td>
+                    <td> This is a journal article, and doesn't have all of the
+                    technical details. 
+                    <ul>
+                        <li> 
+                            <a
+                                                                 href="https://squirrel-prover.github.io/index.html#refs">More
+                                                                 publications</a> </li>
+                        <li> <a
+                                href="https://squirrel-prover.github.io/documentation/index.html">Documentation</a>
+                        </li>
+                    </td>
+                </tr>
+
+                <tr class="week"> <td colspan=4> Part 3: Implementation Security </td> </tr>
+
+                <tr>
+                    <td class="num"> 9 </td>
+                    <td> Oct 4 </td>
+                    <td> <a
+                                 href="http://adam.chlipala.net/papers/FiatCryptoSP19/FiatCryptoSP19.pdf">Simple
+                                 High-Level Code For Cryptographic Arithmetic:  With Proofs, Without Compromises
+                        </a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 10 </td>
+                    <td> Oct 8 </td>
+                    <td> <a
+                                 href="https://dl.acm.org/doi/10.1145/3314221.3314605">FaCT:
+                                 a DSL for timing-sensitive computation</a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 11 </td>
+                    <td> Oct 11 </td>
+                    <td> <a
+                                 href="https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/bond">Vale:
+                                 Verifying High-Performance Cryptographic
+                                 Assembly Code</a></td>
+                    <td> <a
+                                 href="https://github.com/project-everest/vale/tree/master">Repository</a> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 12 </td>
+                    <td> Oct 15 </td>
+                    <td> <a
+                                 href="https://www.microsoft.com/en-us/research/publication/everparse/">EverParse:
+                                 Verified Secure Zero-Copy Parsers for
+                                 Authenticated Message Formats</a> </td>
+                    <td> <ul>
+                            <li> <a
+                                         href="https://github.com/project-everest/everparse">Repository</a></li>
+                            <li> <a
+                                         href="https://www.microsoft.com/en-us/research/publication/hardening-attack-surfaces-with-formally-proven-binary-format-parsers/">Follow-up
+                                         Work </a></li>
+                            </li>
+                                         
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 13 </td>
+                    <td> Oct 18 </td>
+                    <td><a
+                                 href="https://dl.acm.org/doi/pdf/10.1145/3636501.3636961">The
+                                 Last Yard: Foundational End-to-End Verification
+                                 of High-Speed Cryptography</a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 14 </td>
+                    <td> Oct 22 </td>
+                    <td><a href="https://eprint.iacr.org/2022/1669">Jolt:
+                            Recovering TLS Signing Keys via Rowhammer
+                            Faults</a></td>
+                    <td> Project proposals due </td>
+                </tr>
+
+                <tr class="week"> <td colspan=4> Part 4: Topics </td> </tr>
+
+                <tr>
+                    <td class="num"> 15 </td>
+                    <td> Oct 25 </td>
+                    <td> No class: OOPSLA 2024 </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 16 </td>
+                    <td> Oct 29 </td>
+                    <td> <a href="https://arxiv.org/abs/2211.10665">CryptOpt: Verified Compilation with Randomized Program Search for Cryptographic Primitives </a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 17 </td>
+                    <td> Nov 1 </td>
+                    <td> <a
+                                 href="https://ieeexplore.ieee.org/abstract/document/10664346">On
+                                 Separation Logic, Computational Independence,
+                                 and Pseudorandomness</a></td>
+                    <td> Presenter: Shubh </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 18 </td>
+                    <td> Nov 5 </td>
+                    <td> <a
+                                 href="https://www.cs.umd.edu/~hammer/oakland2014/wysteria-oakland2014.pdf">Wysteria:
+                    A Programming Language for Generic, Mixed-Mode Multiparty
+                    Computations</a></td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 19 </td>
+                    <td> Nov 8 </td>
+                    <td> <a
+                            href="https://arxiv.org/abs/1806.07197">Computer-aided
+                            proofs for multiparty computation with active
+                            security</a></td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 20 </td>
+                    <td> Nov 12 </td>
+                    <td> <a href="https://eprint.iacr.org/2023/547">Certifying
+                            Zero-Knowledge Circuits with Refinement Types</a> </td>
+                    <td> <a
+                                 href="https://github.com/Veridise/Coda">Repository</a> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 21 </td>
+                    <td> Nov 15 </td>
+                    <td> <a href="https://eprint.iacr.org/2021/156">Mechanized Proofs of Adversarial Complexity and Application to Universal Composability
+
+                        </a> </td>
+                    <td> Project check-in due </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 22 </td>
+                    <td> Nov 19 </td>
+                    <td> <a href="https://gancher.dev/ipdl.pdf">A Core Calculus
+                            for Equational Proofs of Cryptographic Protocols</a> </td>
+                    <td> Presenter: Conrad </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 23 </td>
+                    <td> Nov 22 </td>
+                    <td> <a href="https://dl.acm.org/doi/10.1145/3632871">EasyBC: A Cryptography-Specific Language for
+                                  Security Analysis of Block Ciphers against
+                                  Differential
+                                  Cryptanalysis</a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 24 </td>
+                    <td> Nov 26 </td>
+                    <td> <a href="https://arxiv.org/abs/2409.02918">SpecMon: Modular Black-Box Runtime Monitoring of Security Protocols
+
+                        </a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 25 </td>
+                    <td> Dec 3 </td>
+                    <td> <a
+                            href="https://www.arxiv.org/pdf/2409.13082">AutoVerus:
+                            Automated Proof Generation for Rust Code</a> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 26 </td>
+                    <td> Dec 6 </td>
+                    <td> Office Hours / Discussion </td>
+                    <td> Attendence optional </td>
+                </tr>
+
+                <tr class="week"> <td colspan=4> Project Presentations </td> </tr>
+
+                <tr>
+                    <td class="num"> 27 </td>
+                    <td> Dec 10 </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td class="num"> 28 </td>
+                    <td> Dec 13 </td>
+                    <td> </td>
+                    <td> Project reports due </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <hr/>
+
+        <h3 id="policies"> Class Policies </h3>
+
+        <h4 style="text-align: left;"> Academic Integrity Policy </h4>
+        For paper reflections, you are to complete them <b>by yourself</b>, with no feedback from others or AI assistants.
+
+        For the final project, 
+        you are free to build upon the work of prior papers and open-source projects with the appropriate citations.
+        In particular, any code or text not written by you personally must be cited.
+        Minor coding tasks and grammar cleanup by AI is allowable, but must be cited. 
+        You may incorporate feedback from others outside of your group with appropriate citations as well. 
+
+        <h4 style="text-align: left;"> Accommodations for Disabilities</h4>
+        Students who wish to receive academic services or accommodations should visit the <a href="https://disabilityaccessservices.sites.northeastern.edu">Disability Access Services</a>.
+        Please provide a letter from the DAS to me early in the semester so that I can arrange the appropriate 
+        accommodations.
+
+        <h4 style="text-align: left;"> Auditing Policy </h4>
+        Auditors are welcome to join in class discussions and submit a final project.
+        If you would like to submit paper reflections or final project
+        materials, instead of using Canvas, please email me with the subject
+        line subject line including CS7480.
+    </body>
+
+</html>
