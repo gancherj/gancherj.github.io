@@ -12,8 +12,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <!-- Favicons. Order and `type` here are deliberate: Safari/WebKit cannot
+             decode SVG favicons, and mdBook's stock markup links the SVG with no
+             `type` attribute, so Safari selects it and then renders no icon at all.
+             Declaring the PNG first and tagging the SVG with its MIME type lets
+             Safari skip the SVG and fall back to the PNG, while Chrome and Firefox
+             still prefer the crisp SVG. -->
+        <link rel="icon" type="image/png" sizes="256x256" href="favicon-a23a26e6.png">
+        <link rel="icon" type="image/svg+xml" href="favicon-8253f745.svg">
+        <link rel="apple-touch-icon" href="favicon-a23a26e6.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
         <link rel="stylesheet" href="css/general-e96d0476.css">
         <link rel="stylesheet" href="css/chrome-d279d366.css">
