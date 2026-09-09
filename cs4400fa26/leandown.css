@@ -1,0 +1,530 @@
+/* Lean 4 Semantic Highlighting Styles */
+
+:root {
+  /* One Light theme inspired (default) */
+  --lean-bg: #fafafa;
+  --lean-fg: #383a42;
+  --lean-border: #e5e5e6;
+  --lean-shadow: rgba(0, 0, 0, 0.05);
+
+  --lean-keyword: #a626a4;
+  --lean-variable: #e45649;
+  --lean-property: #c18401;
+  --lean-function: #4078f2;
+  --lean-namespace: #c18401;
+  --lean-type: #0184bc;
+  --lean-string: #50a14f;
+  --lean-number: #986801;
+  --lean-comment: #a0a1a7;
+  --lean-operator: #0184bc;
+  --lean-sorry: #e45649;
+
+  --lean-hover-bg: rgba(64, 120, 242, 0.15);
+  --lean-hover-shadow: rgba(64, 120, 242, 0.3);
+  --lean-flash-bg: rgba(64, 120, 242, 0.5);
+
+  --lean-tooltip-bg: #f0f0f1;
+  --lean-tooltip-fg: #383a42;
+  --lean-tooltip-border: #e5e5e6;
+  --lean-tooltip-shadow: rgba(0, 0, 0, 0.15);
+  --lean-tooltip-type: #50a14f;
+  --lean-tooltip-code-bg: #e5e5e6;
+  --lean-tooltip-code-fg: #e45649;
+
+  --lean-goal-marker: #0184bc;
+  --lean-goal-marker-hover: #4078f2;
+
+  --lean-squiggly-error: #e45649;
+  --lean-squiggly-warning: #c18401;
+}
+
+:root[data-theme="dark"] {
+  /* One Dark theme inspired */
+  --lean-bg: #282c34;
+  --lean-fg: #abb2bf;
+  --lean-border: #3e4451;
+  --lean-shadow: rgba(0, 0, 0, 0.15);
+
+  --lean-keyword: #c678dd;
+  --lean-variable: #e06c75;
+  --lean-property: #e5c07b;
+  --lean-function: #61afef;
+  --lean-namespace: #e5c07b;
+  --lean-type: #56b6c2;
+  --lean-string: #98c379;
+  --lean-number: #d19a66;
+  --lean-comment: #7f848e;
+  --lean-operator: #56b6c2;
+  --lean-sorry: #ff6b6b;
+
+  --lean-hover-bg: rgba(97, 175, 239, 0.25);
+  --lean-hover-shadow: rgba(97, 175, 239, 0.5);
+  --lean-flash-bg: rgba(97, 175, 239, 0.8);
+
+  --lean-tooltip-bg: #181825;
+  --lean-tooltip-fg: #cdd6f4;
+  --lean-tooltip-border: #45475a;
+  --lean-tooltip-shadow: rgba(0, 0, 0, 0.4);
+  --lean-tooltip-type: #a6e3a1;
+  --lean-tooltip-code-bg: #313244;
+  --lean-tooltip-code-fg: #f38ba8;
+
+  --lean-goal-marker: #56b6c2;
+  --lean-goal-marker-hover: #61afef;
+
+  --lean-squiggly-error: #e06c75;
+  --lean-squiggly-warning: #e5c07b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* One Dark theme inspired */
+    --lean-bg: #282c34;
+    --lean-fg: #abb2bf;
+    --lean-border: #3e4451;
+    --lean-shadow: rgba(0, 0, 0, 0.15);
+
+    --lean-keyword: #c678dd;
+    --lean-variable: #e06c75;
+    --lean-property: #e5c07b;
+    --lean-function: #61afef;
+    --lean-namespace: #e5c07b;
+    --lean-type: #56b6c2;
+    --lean-string: #98c379;
+    --lean-number: #d19a66;
+    --lean-comment: #7f848e;
+    --lean-operator: #56b6c2;
+    --lean-sorry: #ff6b6b;
+
+    --lean-hover-bg: rgba(97, 175, 239, 0.25);
+    --lean-hover-shadow: rgba(97, 175, 239, 0.5);
+    --lean-flash-bg: rgba(97, 175, 239, 0.8);
+
+    --lean-tooltip-bg: #181825;
+    --lean-tooltip-fg: #cdd6f4;
+    --lean-tooltip-border: #45475a;
+    --lean-tooltip-shadow: rgba(0, 0, 0, 0.4);
+    --lean-tooltip-type: #a6e3a1;
+    --lean-tooltip-code-bg: #313244;
+    --lean-tooltip-code-fg: #f38ba8;
+
+    --lean-goal-marker: #56b6c2;
+    --lean-goal-marker-hover: #61afef;
+
+    --lean-squiggly-error: #e06c75;
+    --lean-squiggly-warning: #e5c07b;
+  }
+}
+
+pre code.language-lean {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: var(--lean-fg);
+  background-color: var(--lean-bg);
+  padding: 1.25rem;
+  border-radius: 12px;
+  display: block;
+  overflow-x: auto;
+  border: 1px solid var(--lean-border);
+  box-shadow: 0 10px 30px var(--lean-shadow);
+}
+
+.lean-keyword {
+  color: var(--lean-keyword);
+  font-weight: bold;
+}
+
+.lean-variable {
+  color: var(--lean-variable);
+}
+
+.lean-property {
+  color: var(--lean-property);
+}
+
+.lean-function, .lean-method {
+  color: var(--lean-function);
+}
+
+.lean-namespace {
+  color: var(--lean-namespace);
+}
+
+.lean-type, .lean-class, .lean-struct, .lean-interface {
+  color: var(--lean-type);
+  font-weight: 500;
+}
+
+.lean-string {
+  color: var(--lean-string);
+}
+
+.lean-number {
+  color: var(--lean-number);
+}
+
+.lean-comment {
+  color: var(--lean-comment);
+  font-style: italic;
+}
+
+.lean-operator {
+  color: var(--lean-operator);
+}
+
+.lean-leanSorryLike {
+  color: var(--lean-sorry);
+  text-decoration: underline dashed;
+  font-weight: bold;
+}
+
+/* Synchronized Hover Styling */
+[data-symbol] {
+  transition: background-color 0.15s ease, text-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.lean-hovered {
+  background-color: var(--lean-hover-bg);
+  border-radius: 3px;
+  text-shadow: 0 0 8px var(--lean-hover-shadow);
+  text-decoration: underline;
+}
+
+@keyframes lean-flash-animation {
+  0% { background-color: transparent; }
+  20% { background-color: var(--lean-flash-bg); text-shadow: 0 0 12px var(--lean-flash-bg); }
+  100% { background-color: transparent; }
+}
+
+.lean-flash {
+  animation: lean-flash-animation 1s ease-out;
+  border-radius: 3px;
+}
+
+/* Tooltip styles */
+.lean-tooltip {
+  position: absolute;
+  width: max-content;
+  min-width: 220px;
+  max-width: 480px;
+  background-color: var(--lean-tooltip-bg);
+  color: var(--lean-tooltip-fg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  border: 1px solid var(--lean-tooltip-border);
+  /* Layered shadow: a tight contact shadow plus a soft ambient one reads
+     more like a floating surface than a single flat drop shadow. */
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 8px 28px var(--lean-tooltip-shadow);
+  visibility: hidden;
+  pointer-events: auto;
+  z-index: 9999;
+  line-height: 1.5;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  animation: lean-tooltip-in 0.13s ease-out;
+}
+
+@keyframes lean-tooltip-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lean-tooltip {
+    animation: none;
+  }
+}
+
+/* Thin, unobtrusive scrollbar for long hover contents */
+.lean-tooltip {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lean-tooltip-border) transparent;
+}
+.lean-tooltip::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.lean-tooltip::-webkit-scrollbar-thumb {
+  background-color: var(--lean-tooltip-border);
+  border-radius: 4px;
+  border: 2px solid var(--lean-tooltip-bg);
+}
+.lean-tooltip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lean-tooltip p {
+  margin: 0 0 4px 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.lean-tooltip p:last-child {
+  margin-bottom: 0;
+}
+
+.lean-tooltip pre {
+  margin: 0 0 4px 0;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 1em !important;
+}
+
+.lean-tooltip pre:last-child {
+  margin-bottom: 0;
+}
+
+.lean-tooltip pre code {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 1em !important;
+  color: var(--lean-tooltip-type); /* Highlight type signatures */
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.lean-tooltip code {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.95em !important;
+  color: var(--lean-tooltip-code-fg); /* inline code color */
+  background-color: var(--lean-tooltip-code-bg);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.lean-tooltip hr {
+  margin: 8px -14px; /* bleed to the tooltip edges for a cleaner divider */
+  border: none;
+  border-top: 1px solid var(--lean-tooltip-border);
+  opacity: 0.7;
+}
+
+.lean-tooltip ul {
+  margin: 0 0 4px 0;
+  padding-left: 16px;
+  font-size: inherit;
+  color: inherit;
+}
+
+.lean-tooltip li {
+  margin-bottom: 2px;
+  font-size: inherit;
+  color: inherit;
+}
+
+.lean-tooltip em {
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Goal Turnstile Marker styling */
+.lean-goal-marker {
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--lean-goal-marker);
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.lean-goal-marker:hover {
+  opacity: 1;
+  color: var(--lean-goal-marker-hover);
+  transform: scale(1.2);
+}
+
+/* Diagnostic Marker styling */
+.lean-diagnostic-marker {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.lean-diagnostic-marker:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.lean-diagnostic-info {
+  color: var(--lean-goal-marker);
+}
+
+.lean-diagnostic-info:hover {
+  color: var(--lean-goal-marker-hover);
+}
+
+.lean-diagnostic-warning {
+  color: var(--lean-property);
+}
+
+.lean-diagnostic-warning:hover {
+  color: var(--lean-property);
+  opacity: 1;
+}
+
+.lean-diagnostic-error {
+  color: var(--lean-sorry);
+}
+
+.lean-diagnostic-error:hover {
+  color: var(--lean-sorry);
+  opacity: 1;
+}
+
+/* Inline diagnostics (e.g. #eval and #check output) */
+.lean-diagnostic-inline {
+  display: block;
+  color: var(--lean-goal-marker);
+  margin-left: 20px;
+}
+
+.lean-diagnostic-details {
+  display: block;
+  margin-left: 20px;
+}
+
+.lean-diagnostic-summary {
+  display: inline;
+  color: var(--lean-goal-marker);
+  cursor: pointer;
+  outline: none;
+}
+
+.lean-diagnostic-details summary::-webkit-details-marker {
+  display: none;
+}
+.lean-diagnostic-details summary {
+  list-style: none;
+}
+
+.lean-diagnostic-summary::after {
+  content: " ▸";
+  font-style: normal;
+  font-size: 0.8em;
+  opacity: 0.7;
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+
+.lean-diagnostic-details[open] .lean-diagnostic-summary::after {
+  content: " ▾";
+}
+
+.lean-diagnostic-summary:hover {
+  text-decoration: underline;
+}
+
+.lean-diagnostic-expanded {
+  display: block;
+  color: var(--lean-goal-marker);
+  margin-left: 0px;
+  opacity: 0.95;
+  white-space: pre;
+}
+
+
+
+/* Squiggly underline annotations (error / warning)
+   Uses a repeating SVG tile for a tight, controlled wave amplitude.
+   Native CSS `wavy` amplitude is browser-controlled and too large. */
+.lean-squiggly-error,
+.lean-squiggly-warning {
+  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 2px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 4px 2px;
+}
+
+/* Light theme */
+.lean-squiggly-error {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23e45649' stroke-width='0.7' fill='none'/></svg>");
+}
+.lean-squiggly-warning {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23c18401' stroke-width='0.7' fill='none'/></svg>");
+}
+
+/* Dark theme ([data-theme="dark"]) */
+:root[data-theme="dark"] .lean-squiggly-error {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23e06c75' stroke-width='0.7' fill='none'/></svg>");
+}
+:root[data-theme="dark"] .lean-squiggly-warning {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23e5c07b' stroke-width='0.7' fill='none'/></svg>");
+}
+
+/* Dark theme (prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lean-squiggly-error {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23e06c75' stroke-width='0.7' fill='none'/></svg>");
+  }
+  :root:not([data-theme="light"]) .lean-squiggly-warning {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='2'><path d='M0 1.5 Q1 0.3 2 1.5 Q3 2.7 4 1.5' stroke='%23e5c07b' stroke-width='0.7' fill='none'/></svg>");
+  }
+}
+
+.lean-squiggly-error:hover,
+.lean-squiggly-warning:hover {
+  opacity: 0.85;
+}
+
+/* Lean compile / LSP loading indicator */
+.lean-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 12rem;
+  padding: 3rem 1.5rem;
+  color: var(--lean-fg);
+  text-align: center;
+}
+
+.lean-loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--lean-border);
+  border-top-color: var(--lean-function);
+  border-radius: 50%;
+  animation: lean-loading-spin 0.8s linear infinite;
+}
+
+.lean-loading-message {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--lean-comment);
+}
+
+@keyframes lean-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
