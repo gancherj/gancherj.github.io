@@ -1,0 +1,17 @@
+# Courses, most recent first. Each offering links to that term's course page.
+- title: "CS 4400: Programming Languages"
+  offerings:
+    - term: Fall 2026
+      url: https://course.ccs.neu.edu/cs4400f26/
+
+- title: "CS 2800: Logic and Computation"
+  offerings:
+    - term: Spring 2025
+      url: https://course.ccs.neu.edu/cs2800sp25/
+    - term: Fall 2025
+      url: https://course.ccs.neu.edu/cs2800f25/
+
+- title: "Special Topics in PL: Formal Security for Cryptography"
+  offerings:
+    - term: Fall 2024
+      url: CS7480_Fall2024/class.html
