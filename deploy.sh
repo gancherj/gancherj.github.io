@@ -1,6 +1,6 @@
 #!/bin/sh
-# Build the site: compiles typst/index.typ into the toplevel index.html.
+# Build the site and open it locally for a look.
 set -e
 cd "$(dirname "$0")"
-typst compile --features html --format html --root . typst/index.typ index.html
+./build.sh
 open index.html
