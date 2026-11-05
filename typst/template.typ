@@ -34,9 +34,6 @@
       if title != none { html.h1(class: "page-title", title) }
       body
     })
-    html.footer(class: "site-footer")[
-      Last updated #datetime.today().display("[month repr:long] [year]").
-    ]
   })
 })
 

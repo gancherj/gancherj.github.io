@@ -48,7 +48,7 @@ h2 { font-size: 1.25rem; margin: 2.25rem 0 .75rem; }
 
 /* ---------- Header ---------- */
 
-.site-header, .content, .site-footer {
+.site-header, .content {
   max-width: 42rem;
   margin: 0 auto;
   padding-left: 1.25rem;
@@ -127,15 +127,6 @@ h2 { font-size: 1.25rem; margin: 2.25rem 0 .75rem; }
 /* Teaching & students */
 .plain { padding-left: 1.2rem; }
 .plain li { margin: .35rem 0; }
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-  padding-top: 1rem;
-  padding-bottom: 2.5rem;
-  color: var(--faded);
-  font-size: .85rem;
-}
 
 /* ---------- Small screens ---------- */
 
